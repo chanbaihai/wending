@@ -22,13 +22,12 @@ module.exports = {
     rules: [
       { test: /\.js$/, loader: 'babel-loader' },
       { test: /\.css$/, use: ['style-loader', 'css-loader'] },
-      { test: /\.scss$/, use: [minicss.loader, 'css-loader', 'sass-loader'] },
+      { test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader'] },
       {
         test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/i,
         loader: 'url-loader',
         query: { limit: 1024, name: '/img/[name].[ext]' }
       },
-      { test: /\.html$/, loader: 'html-url-loader' },
       {
         test: /\.vue$/,
         loader: 'vue-loader',
@@ -41,20 +40,25 @@ module.exports = {
           }
           // other vue-loader options go here
         }
-      }
+      },{test:/\.html$/,loader:'raw-loader'}
     ]
   },
+  devtool:'source-map',
   devServer: {
+    inline:true,
     hot: true,
     open: true,
-    inline: true
+    overlay:{
+      warnings:false,
+      errors:true
+    }
   },
   plugins: [
     new minicss({
       // filename: '/css/[name].css'
     }),
     new htmlplugin({
-      template: path.resolve(__dirname, 'index.html')
+      template: path.resolve(__dirname, 'index.html'),
     }),
     new webpack.HotModuleReplacementPlugin()
   ],

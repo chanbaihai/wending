@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    border: none;
+}
+.flex{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+.column{
+    flex-direction: column;
+}
+.wrap{
+    width: 100%
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}

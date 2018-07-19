@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "cross-env NODE_ENV=production webpack --watch -d",
-    "serve": "webpack-dev-server --progress --config webpack.config.js",
+    "serve": "webpack-dev-server",
     "start": "concurrently  \"npm run server\"  \"npm run webpack\""
   },
   "keywords": [],
@@ -28,6 +28,7 @@
     "mini-css-extract-plugin": "^0.4.1",
     "node-sass": "^4.9.2",
     "optimize-css-assets-webpack-plugin": "^4.0.3",
+    "raw-loader": "^0.5.1",
     "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
     "ts-loader": "^4.4.2",
