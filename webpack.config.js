@@ -16,7 +16,10 @@ module.exports = {
   },
   stats: 'errors-only',
   resolve: {
-    extensions: ['*', '.css', '.scss', '.js', '.vue', '.json', '.ts']
+    extensions: ['*', '.css', '.scss', '.js', '.vue', '.json', '.ts'],
+    alias:{
+      '@':path.resolve(__dirname,'/src')
+    }
   },
   module: {
     rules: [

@@ -1,18 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="./src/css/swiper.min.css">
 </head>
+
 <body>
     <!-- head -->
+    <header class="wrap">
+        <div class="container header">
+            <div class='logo flex'>
+                <div class='flex'>
+                    <img src="/static/img/logo.png" alt="课工厂">
+                    <span>文鼎校区</span>
+                </div>
+                <img src="/static/img/slogan.png" alt="">
+            </div>
+            <nav class='nav flex'>
+                <ul class='flex'>
+                    <li class='active'>
+                        <a href="#">首页</a>
+                    </li>
+                    <li>
+                        <a href="#">免费课程</a>
+                    </li>
+                    <li>
+                        <a href="#">名师团队</a>
+                    </li>
+                    <li>
+                        <a href="#">学员风采</a>
+                    </li>
+                    <li>
+                        <a href="#">报名流程</a>
+                    </li>
+                    <li>
+                        <a href="#">校区介绍</a>
+                    </li>
+                    <li>
+                        <a href="#">技术论坛</a>
+                    </li>
+                </ul>
+                <div class='user flex'>
+                    <img src="/static/img/user-photo.png" alt="">
+                    <span>用户名称最多八个字</span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- head -->
+    <!-- swiper -->
     <div class="wrap">
-        <div class="container flex">
+        <div class="swiper-container container-fluied" id="swiperBanner">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide1">
+                    <img src="/static/img/banner.png" width="100%" height="100%">
+                </div>
+                <div class="swiper-slide slide1">
+                    <img src="/static/img/banner.png" width="100%" height="100%">
+                </div>
+                <div class="swiper-slide slide1">
+                    <img src="/static/img/banner.png" width="100%" height="100%">
+                </div>
+                <div class="swiper-slide slide1">
+                    <img src="/static/img/banner.png" width="100%" height="100%">
+                </div>
 
+            </div>
+            <div class="swiper-pagination"></div>
         </div>
     </div>
-    <!-- head -->
+    <!-- swiper -->
+    <div id="bg">
+        <!-- advantage-->
+        <div class="wrap">
+            <div class="container advantage flex">
+                <div class=' flex'>
+                    <img src="/static/img/advantage.png" alt="">
+                    <div class='dis'>
+                        <h2>就业保障</h2>
+                        <span>北京大学校办企业</span>
+                    </div>
+                </div>
+                <div class=' flex'>
+                    <img src="/static/img/advantage.png" alt="">
+                    <div class='dis'>
+                        <h2>就业保障</h2>
+                        <span>北京大学校办企业</span>
+                    </div>
+                </div>
+                <div class=' flex'>
+                    <img src="/static/img/advantage.png" alt="">
+                    <div class='dis'>
+                        <h2>就业保障</h2>
+                        <span>北京大学校办企业</span>
+                    </div>
+                </div>
+                <div class=' flex'>
+                    <img src="/static/img/advantage.png" alt="">
+                    <div class='dis'>
+                        <h2>就业保障</h2>
+                        <span>北京大学校办企业</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- advantage-->
+        <!-- heightsalary -->
+        <div class="wrap">
+            <div class="container heightsalary">
+                <div class='displayitem flex column'>
+                    <h1 class='flex'>
+                        <img src="/static/img/heightsalary.png" alt="">
+                    </h1>
+                    <div class='display-detail flex'>
+                        <div class='classes'>
+                            <ul class='flex class-slide'>
+                                <li class='flex column'>
+                                    <img src="/static/img/ui.png" alt="">
+                                    <p class='classname'>KU05班</p>
+                                    <div class='line'></div>
+                                    <dl class='flex'>
+                                        <dt>班级类型:&nbsp;&nbsp;</dt>
+                                        <dd>UI设计全日制</dd>
+                                    </dl>
+                                    <dl class='flex salary'>
+                                        <dt>最高月薪:&nbsp;&nbsp;</dt>
+                                        <dd>12500元</dd>
+                                    </dl>
+                                    <dl class='flex evarage-salary'>
+                                        <dt>平均月薪:&nbsp;&nbsp;</dt>
+                                        <dd>6500元</dd>
+                                    </dl>
+                                </li>
+                                <li class='flex column'>
+                                        <img src="/static/img/ui.png" alt="">
+                                        <p class='classname'>KU05班</p>
+                                        <div class='line'></div>
+                                        <dl class='flex'>
+                                            <dt>班级类型:&nbsp;&nbsp;</dt>
+                                            <dd>UI设计全日制</dd>
+                                        </dl>
+                                        <dl class='flex salary'>
+                                            <dt>最高月薪:&nbsp;&nbsp;</dt>
+                                            <dd>12500元</dd>
+                                        </dl>
+                                        <dl class='flex evarage-salary'>
+                                            <dt>平均月薪:&nbsp;&nbsp;</dt>
+                                            <dd>6500元</dd>
+                                        </dl>
+                                    </li>
+                                    <li class='flex column'>
+                                            <img src="/static/img/kw.png" alt="">
+                                            <p class='classname'>KW05班</p>
+                                            <div class='line'></div>
+                                            <dl class='flex'>
+                                                <dt>班级类型:&nbsp;&nbsp;</dt>
+                                                <dd>UI设计全日制</dd>
+                                            </dl>
+                                            <dl class='flex salary'>
+                                                <dt>最高月薪:&nbsp;&nbsp;</dt>
+                                                <dd>12500元</dd>
+                                            </dl>
+                                            <dl class='flex evarage-salary'>
+                                                <dt>平均月薪:&nbsp;&nbsp;</dt>
+                                                <dd>6500元</dd>
+                                            </dl>
+                                        </li>
+                                        <li class='flex column'>
+                                                <img src="/static/img/java.png" alt="">
+                                                <p class='classname'>KD05班</p>
+                                                <div class='line'></div>
+                                                <dl class='flex'>
+                                                    <dt>班级类型:&nbsp;&nbsp;</dt>
+                                                    <dd>UI设计全日制</dd>
+                                                </dl>
+                                                <dl class='flex salary'>
+                                                    <dt>最高月薪:&nbsp;&nbsp;</dt>
+                                                    <dd>12500元</dd>
+                                                </dl>
+                                                <dl class='flex evarage-salary'>
+                                                    <dt>平均月薪:&nbsp;&nbsp;</dt>
+                                                    <dd>6500元</dd>
+                                                </dl>
+                                            </li>
+                                            <li class='flex column'>
+                                                    <img src="/static/img/java.png" alt="">
+                                                    <p class='classname'>KD05班</p>
+                                                    <div class='line'></div>
+                                                    <dl class='flex'>
+                                                        <dt>班级类型:&nbsp;&nbsp;</dt>
+                                                        <dd>UI设计全日制</dd>
+                                                    </dl>
+                                                    <dlclass='flex salary'>
+                                                        <dt>最高月薪:&nbsp;&nbsp;</dt>
+                                                        <dd>12500元</dd>
+                                                    </dl>
+                                                    <dl class='flex evarage-salary'>
+                                                        <dt>平均月薪:&nbsp;&nbsp;</dt>
+                                                        <dd>6500元</dd>
+                                                    </dl>
+                                                </li>
+                                                <li class='flex column'>
+                                                        <img src="/static/img/ui.png" alt="">
+                                                        <p class='classname'>KU05班</p>
+                                                        <div class='line'></div>
+                                                        <dl class='flex'>
+                                                            <dt>班级类型:&nbsp;&nbsp;</dt>
+                                                            <dd>UI设计全日制</dd>
+                                                        </dl>
+                                                        <dl class='flex salary'>
+                                                            <dt>最高月薪:&nbsp;&nbsp;</dt>
+                                                            <dd>12500元</dd>
+                                                        </dl>
+                                                        <dl class='flex evarage-salary'>
+                                                            <dt>平均月薪:&nbsp;&nbsp;</dt>
+                                                            <dd>6500元</dd>
+                                                        </dl>
+                                                    </li>
+                            </ul>
+                            <div class='pre-arrow'></div>
+                            <div class='next-arrow'></div>
+                        </div>
+                        <div class='moment-students'>
+                            <div class='title flex'><span>最近就业学员</span></div>
+                            <ul class='sdutent-list '>
+                                <li class='flex'>
+                                    <span>李*</span>
+                                    <span>南京*德软件公司</span>
+                                    <span>月薪: <span>12000</span></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- heightsalary -->
+        </div>
+
 </body>
+<script src="./src/js/swiper.js"></script>
+<script>
+    let mySwiper = new Swiper('#swiperBanner', {
+        direction: 'horizontal',
+        loop: true,
+        //   autoplay: {
+        //     delay: 2000,
+        //     disableOnInteraction: false,
+        // },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        }
+    })
+</script>
+
 </html>
