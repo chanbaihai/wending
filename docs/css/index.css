@@ -590,11 +590,8 @@ button.swiper-pagination-bullet {
   margin: 0 auto; }
 
 body {
-  overflow-x: hidden; }
-
-#bg {
-  background-color: #efefef;
-  border: 1px solid transparent; }
+  overflow-x: hidden;
+  background-color: #efefef; }
 
 .display-title {
   height: 180px;
@@ -607,6 +604,9 @@ body {
 .titlefont {
   font-size: 22px;
   color: #353535; }
+
+.headerwrap {
+  background-color: #fff; }
 
 .header {
   padding: 10px 0 0; }
