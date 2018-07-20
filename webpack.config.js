@@ -4,15 +4,17 @@ const uglify = require('uglifyjs-webpack-plugin')
 const optimizecss = require('optimize-css-assets-webpack-plugin')
 const htmlplugin = require('html-webpack-plugin')
 const webpack = require('webpack')
+const cleanwebpack = require('clean-webpack-plugin')
+let env = process.env.NODE_ENV
 module.exports = {
   mode: 'development',
   entry: {
     index: path.resolve(__dirname, './src/js/index.js')
   },
   output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: 'js/[name].js'
-    // publicPath: '/dist'
+    path: path.resolve(__dirname, './docs'),
+    filename: 'js/[name].js',
+    publicPath: env==='production'?'./':''
   },
   stats: 'errors-only',
   resolve: {
@@ -24,12 +26,22 @@ module.exports = {
   module: {
     rules: [
       { test: /\.js$/, loader: 'babel-loader' },
-      { test: /\.css$/, use: ['style-loader', 'css-loader'] },
-      { test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader'] },
+      { test: /\.css$/, use: [{
+        loader:minicss.loader,
+        options:{
+          publicPath:'../'
+        }
+      }, 'css-loader'] },
+      { test: /\.scss$/, use: [{
+        loader:minicss.loader,
+        options:{
+          publicPath:'../'
+        }
+      }, 'css-loader', 'sass-loader'] },
       {
-        test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/i,
+        test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2|svg|svgz)$/i,
         loader: 'url-loader',
-        query: { limit: 1024, name: '/img/[name].[ext]' }
+        query: { limit: 1024, name: 'assets/[name].[ext]' }
       },
       {
         test: /\.vue$/,
@@ -43,7 +55,7 @@ module.exports = {
           }
           // other vue-loader options go here
         }
-      },{test:/\.html$/,loader:'raw-loader'}
+      },{test:/\.html$/,loader:env==='production'?'html-url-loader':'raw-loader'}
     ]
   },
   devtool:'source-map',
@@ -57,11 +69,16 @@ module.exports = {
     }
   },
   plugins: [
+    new cleanwebpack('dist/*.*',{
+      root:__dirname,
+      verbose:true,
+      dry:true
+    }),
     new minicss({
-      // filename: '/css/[name].css'
+      filename: process.env.NODE_ENV==='production'?'/css/[name].css':'[name].css'
     }),
     new htmlplugin({
-      template: path.resolve(__dirname, 'index.html'),
+      template:path.resolve(__dirname, 'index.html'),
     }),
     new webpack.HotModuleReplacementPlugin()
   ],

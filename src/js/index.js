@@ -1,11 +1,15 @@
 import '../scss/index.scss'
+import Swiper from './swiper.js'
 import $ from 'jquery'
 if (process.env.NODE_ENV !== 'production') {
   require('../../index.html')
 }
 // nav toggleclass
-$('#nav li').click(()=>{
-  $(this).addClass('active').siblings().removeClass('active')
+$('#nav>li').click(function() {
+  $(this)
+    .addClass('active')
+    .siblings()
+    .removeClass('active')
 })
 // 班级轮播
 let index = 0
@@ -15,10 +19,55 @@ $('.pre-arrow').click(() => {
   translate($('.class-slide'), index)
 })
 $('.next-arrow').click(() => {
-  index >= length-4 ? index = 0 : index++
+  index >= length - 4 ? (index = 0) : index++
   translate($('.class-slide'), index)
 })
 function translate(jq, index) {
   let dis = index * 25
   jq.css('transform', `translateX(-${dis}%)`)
 }
+
+//
+new Swiper('#swiperBanner', {
+  direction: 'horizontal',
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  }
+})
+
+// liqianmin  老师轮播
+$(() => {
+  let index = 0
+  let length = $('.teacher-item').length
+
+  $('.prev').click(() => {
+    index <= 0 ? (index = Math.floor((length - 4) / 3) + 1) : index--
+    translate($('.teacher-list'), index)
+    $('.point>li')
+      .eq(index)
+      .addClass('active')
+      .siblings()
+      .removeClass('active')
+  })
+
+  $('.next').click(() => {
+    index > Math.floor((length - 4) / 3) ? (index = 0) : index++
+    translate($('.teacher-list'), index)
+    $('.point>li')
+      .eq(index)
+      .addClass('active')
+      .siblings()
+      .removeClass('active')
+  })
+
+  function translate(jq, index) {
+    let dis = 3 * index * 34.5
+    jq.css('transform', `translateX(-${dis}%)`)
+  }
+})

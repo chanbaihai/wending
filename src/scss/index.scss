@@ -1,4 +1,5 @@
 @import './common';
+@import '../css/swiper.min.css';
 .header {
   padding: 10px 0 0;
   .logo {
@@ -17,7 +18,7 @@
     .user {
       > div {
         margin-right: 10px;
-        background: url('/static/img/user-photo.png') no-repeat center/cover;
+        background: url('../../static/img/user-photo.png') no-repeat center/cover;
         border-radius: 50%;
         width: 40px;
         height: 40px;
@@ -155,16 +156,16 @@
         }
         .pre-arrow {
           left: 0;
-          background: url('/static/img/pre.png');
+          background: url('../../static/img/pre.png');
           &:hover {
-            background: url('/static/img/pre-active.png');
+            background: url('../../static/img/pre-active.png');
           }
         }
         .next-arrow {
           right: 0;
-          background: url('/static/img/next.png');
+          background: url('../../static/img/next.png');
           &:hover {
-            background: url('/static/img/next-active.png');
+            background: url('../../static/img/next-active.png');
           }
         }
       }
@@ -198,7 +199,7 @@
           .play {
             width: 82px;
             height: 82px;
-            background: url('/static/img/play-big.png') no-repeat center/cover;
+            background: url('../../static/img/play-big.png') no-repeat center/cover;
           }
         }
         .photo {
@@ -229,13 +230,13 @@
         .play {
           width: 54px;
           height: 54px;
-          background: url('/static/img/play-small.png') no-repeat center/cover;
+          background: url('../../static/img/play-small.png') no-repeat center/cover;
         }
       }
       .photo {
         width: 100%;
         height: 100%;
-        background: url('/static/img/student.jpg') no-repeat center center/cover;
+        background: url('../../static/img/student.jpg') no-repeat center center/cover;
         transition: all 1s;
       }
     }
@@ -288,7 +289,7 @@
       overflow: hidden;
       left: 20px;
       top: -50px;
-      background: url('/static/img/hr-photo.png') no-repeat center/cover;
+      background: url('../../static/img/hr-photo.png') no-repeat center/cover;
     }
     .company {
       height: 25%;
@@ -301,7 +302,7 @@
       .company-logo {
         width: 150px;
         height: 100%;
-        background: url('/static/img/company-logo.png') no-repeat center/100%
+        background: url('../../static/img/company-logo.png') no-repeat center/100%
           100%;
       }
     }
@@ -309,6 +310,16 @@
       padding: 10px 20px;
       height: 75%;
       @include bdb(1px);
+      position: relative;
+      &:after{
+        content:'';
+        width: 38px;
+        height: 24px;
+        background: url('../../static/img/dot.png') no-repeat center/100% 100%;
+        position: absolute;
+        right: 33px;
+        top: 30px;
+      }
       div {
         &:first-child {
           color: $titlefc;
@@ -360,7 +371,7 @@
         &:first-child {
           width: 100%;
           height: 50%;
-          background: url('/static/img/course.png') no-repeat center/auto 100%;
+          background: url('../../static/img/course.png') no-repeat center/auto 100%;
         }
       }
       .course-detial {
@@ -392,6 +403,28 @@
       margin-top: 40px;
       &:first-child{
         margin-top: 0;
+      }
+      &:nth-child(2){
+        .course-name{
+          background-image: url('../../static/img/java-course.png');
+          .item-all{
+            background-image: url('../../static/img/java-all.png');
+            &:hover{
+              background-image: url('../../static/img/java-all-active.png');
+            }
+          }
+        }
+      }
+      &:last-child{
+        .course-name{
+          background-image: url('../../static/img/web-course.png');
+          .item-all{
+            background-image: url('../../static/img/web-all.png');
+            &:hover{
+              background-image: url('../../static/img/web-all-active.png');
+            }
+          }
+        }
       }
       > div {
         height: 400px;
@@ -443,7 +476,7 @@
               width: 40px;
               height: 40px;
               display: inline-block;
-              background: url('/static/img/user-photo.png') no-repeat
+              background: url('../../static/img/user-photo.png') no-repeat
                 center/cover;
               margin-right: 10px;
             }
@@ -463,7 +496,7 @@
           border-radius: 10px;
           min-width: 286px;
           min-height: 192px;
-          background: #000 url('/static/img/course-detail.png') no-repeat
+          background: #000 url('../../static/img/course-detail.png') no-repeat
             center/cover;
           position: relative;
           cursor: pointer;
@@ -491,7 +524,7 @@
       .course-name {
         width: 286px;
         border-radius: 10px;
-        background: url('/static/img/ui-course.png') no-repeat center/100% 100%;
+        background: url('../../static/img/ui-course.png') no-repeat center/100% 100%;
         position: relative;
         .item-all {
           cursor: pointer;
@@ -500,9 +533,565 @@
           left: 20px;
           width: 141px;
           height: 41px;
-          background: url('/static/img/ui-all.png') no-repeat center center/100%;
+          background: url('../../static/img/ui-all.png') no-repeat center center/100%;
         }
       }
     }
   }
+}
+
+
+.company-project{
+  margin-bottom: 50px;
+  .project{
+    .project-list{
+      margin-top: 30px;
+      width: 100%;
+      >div{
+        width: 388px;
+        overflow: hidden;
+        height: 600px;
+        border-radius: 10px;
+        &:first-child{
+          background: url('../../static/img/project-big.png') no-repeat center/100% 100%;
+        }
+        &:nth-child(2){
+          >div{
+            width: 100%;
+            height: 290px;
+            border-radius: 10px;
+            background: url('../../static/img/project-small.png') no-repeat center/100% 100%;
+          }
+        }
+        &:nth-child(3){
+          >div{
+            width: 100%;
+            height: 290px;
+            border-radius: 10px;
+            background: url('../../static/img/project-small.png') no-repeat center/100% 100%;
+          }
+        }
+      }
+    }
+    .project-title{
+      >div{
+        width: 140px;
+        height: 34px;
+        font-size: 14px;
+        color:#858585;
+        border-radius: 34px;
+        background-color: #fff;
+        border: 1px solid #858585;
+        text-align: center;
+        line-height: 34px;
+        margin-left: 25px;
+        &:hover,&.active{
+          background-color: #9BB700;
+          color: #fff;
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+// liqianmin
+img{
+  vertical-align: top;
+}
+
+/* 商业实战 */
+.shizhan-wrap {
+  width: 1200px;
+  margin: 0 auto;
+  .shizhan-title {
+      margin: 0 auto;
+      width: 522px;
+      height: 83px;
+      background: url("../../static/img/资源 57.png");
+  }
+  .shizhan-content{
+      margin-top:70px; 
+      position: relative;
+      .shizhan-list {
+          display: flex;
+          justify-content: space-between;
+          .shizhan-item {
+              width: 580px;
+              height: 380px;
+              background: url("../../static/img/资源 22.png");
+              .item-title {
+                  color: #fff;
+                  height: 60px;
+                  line-height: 60px;
+                  text-align: center;
+              }
+              .item-content {
+                  padding: 45px 20px 0 20px;
+                  display: flex;
+                  justify-content: space-between;
+                  .list {
+                      li{
+                          margin-bottom: 45px;
+                          display: flex;
+                          span{
+                              color: #6c6c6c;
+                              font-size: 18px;
+                              font-weight: 400;
+                          }
+                          p{
+                              color: #fe940d;
+                              margin: -5px 0 0 10px;
+                              font-size: 22px;
+                              font-weight: 400;
+                          }
+                      }
+                  }
+              }
+          }
+          .shizhan-item1{
+              background: url("../../static/img/资源 23.png");
+              .not-practice{
+                color:$contentfc !important;
+              }
+              .item-content1 {
+                  justify-content: flex-end;
+              }
+          }
+      }
+      .vs {
+          position: absolute;
+          top: 135px;
+          left: 525px;
+          width: 150px;
+          height: 150px;
+          background: url("../../static/img/资源 24.png");
+      }
+  }
+}
+
+
+/* 入学流程 */
+.liucheng-wrap {
+  width: 1200px;
+  margin: 70px auto 0;
+  .liucheng-title {
+      margin: 0 auto;
+      width: 394px;
+      height: 83px;
+      background: url("../../static/img/资源 58.png");
+  }
+  .liucheng-list {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 70px;
+      .liucheng-item {
+          margin-right: 40px;
+          margin-bottom: 50px;
+          position: relative;
+          text-align: center;
+          width: 260px;
+          height: 196px;
+          border-radius: 10px;
+          background-color: #fff;
+          .pic {
+              margin-top: 20px;
+          }
+          .name {
+              margin: 15px 0;
+              color: #6e6e6e;
+              font-size: 16px;
+          }
+          .about {
+              display: inline-block;
+              line-height: 30px;
+              font-size: 14px;
+              color: #fe9515;
+              width: 96px;
+              height: 30px;
+              border-radius: 30px;
+              border: 1px solid #fe9515;
+          }
+          .arrow {
+              position: absolute;
+              right: -40px;
+              top: 85px;
+              width: 0;
+              height: 0;
+              border-width: 20px;
+              border-color: transparent transparent transparent white;
+              border-style: solid;
+          }
+          .arrow1 {
+              border-color: white transparent transparent  transparent;
+              top: 196px;
+              left: 110px;
+          }
+          .arrow2 {
+              border-color:  transparent white transparent  transparent;
+              top: 80px;
+              left: -40px;
+          }
+      }
+  }
+}
+
+/* 顶尖讲师 */
+.teacher-wrap {
+  width: 1200px;
+  margin: 0 auto;
+  .teacher-title{
+      margin: 0 auto;
+      width: 480px;
+      height: 83px;
+      background: url("../../static/img/资源 59.png");
+  }
+  .teacher-content {
+    position: relative;
+      width: 1200px;
+      margin-top: 70px;
+      overflow: hidden;
+      .teacher-list {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          transition: all .5s;
+          .teacher-item:first-child{
+              margin-left:0;
+          }
+          .teacher-item{
+              margin-left: 3.5%;
+              flex-direction: column;
+              min-width: 31%;
+              width: 388px;
+              height: 360px;
+              border-radius: 10px;
+              background-color: #fff;
+              .list-top {
+                  box-sizing: border-box;
+                  padding: 20px 25px;
+                  display: flex;
+                  .pic{
+                      width: 120px;
+                      height: 120px;
+                  }
+                  .teacher-info{
+                      margin-left: 16px;
+                      .teacher-top {
+                          display: flex;
+                          justify-content: space-around;
+                          .name{
+                              font-weight: 400;
+                          }
+                          .exprience {
+                              margin: 10px 0 0 20px;
+                          }
+                      }
+                  }
+                  .best{
+                      color: #ff9514;
+                      margin: 12px 0;
+                  }
+                  .video {
+                      display: inline-block;
+                      width: 116px;
+                      height: 34px;
+                      background: url("../../static/img/资源 33.png");
+                  }
+                  .video:hover{
+                      background: url("../../static/img/资源 34.png");
+                  }
+              }
+              .list-middle{
+                  border-top: 1px solid #dddddd;  
+                  .list {
+                      box-sizing: border-box;
+                      padding: 10px 25px;
+                      .item{
+                          padding:5px 0;
+                      }
+                  }
+              }
+              .list-bottom {
+                  padding: 0 25px;
+                  .pingjia {
+                      color: #ff9514;
+                  }
+                  .pingjia-content {
+                      span{
+                          display: inline-block;
+                          color: #b0b0b0;
+                          margin: 5px 10px 0 0;
+                      }
+                  }
+              }
+          }
+      }
+  }
+  .teacher-bottom {
+      width: 220px;
+      margin:  25px auto 0;
+      display: flex;        
+      .prev,.next {
+          display: inline-block;
+          width: 39px;
+          height: 39px;
+          background: url("../../static/img/资源 35.png");
+      }        
+      .next {
+          background: url("../../static/img/资源 36.png");
+      }
+      .prev:hover {
+          background: url("../../static/img/资源 37.png");
+      }
+      .next:hover {
+          background: url("../../static/img/资源 38.png");
+      }
+      .point {
+          width: 140px;
+          height: 38px;
+          padding: 11px 0;
+          display: flex;
+          justify-content: space-around;
+      }
+      .point li {
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background-color: #a2a2a2;
+      }
+      .point li.active {
+          background-color: #9ab506;
+          
+      }
+  }
+}
+
+
+/* 新闻资讯 */
+.news-wrap {
+  width: 1200px;
+  margin: 70px auto 0;
+  .news {
+      margin: 0 auto;
+      width: 164px;
+      height: 34px;
+      background: url("../../static/img/资源 60.png");
+  }
+  .news-inner{
+      margin-top: 70px;
+      display: flex;
+      justify-content: space-between;
+      .hangye {
+          background-color: #fff;
+          width: 580px;
+          height: 400px;
+          border-radius: 10px;
+          .hangye-top {
+              display: flex;
+              justify-content: space-between;
+              .hangye-title{
+                  font-size: 24px;
+                  display: inline-block;
+                  width: 160px;
+                  height: 50px;
+                  text-align: center;
+                  line-height: 50px;
+                  color: #fff;
+                  background-color: #fe9515;
+                  border-top-left-radius: 10px;
+                  border-bottom-right-radius: 20px;
+              }
+              .lookfor {
+                  color: #a1a1a1;
+                  font-size: 14px;
+                  padding: 15px 20px 0 0;                    
+                  font-weight: 400;
+              }
+          }
+          .hangye-middle{
+              padding: 20px 25px;
+              display: flex;
+              justify-content: space-between;
+              .middle-content {
+                  width: 290px;
+                  h3{
+                      font-weight: 400 !important;
+                  }
+                  p{
+                      color: #a5a5a5;
+                  }
+              }
+          }
+          .hangye-bottom{
+              .hangye-list{
+                  padding:0 25px;
+                  .hangye-item{
+                       margin-bottom: 15px;
+                      display: flex;
+                      justify-content: space-between;
+                      .hangye-item-left {
+                          display: flex;
+                          justify-content: space-between;
+                          i{
+                              margin: 5px 10px 0 0;
+                              display: inline-block;
+                              width: 10px;
+                              height: 10px;
+                              border-radius: 50%;
+                              background-color: #dbdddc;
+                          }
+                          p{
+                              font-weight: 400;
+                          }
+                      }
+                      .time {
+                          font-size: 13px;
+                          color: #b0b0b0;
+                          font-weight: 400;
+                      }
+                  }
+              }
+          }
+      }
+      .xiaoqu.hangye {
+          .hangye-top{
+              .hangye-title {
+                  background-color: #ff494b;
+              }
+          }
+      }
+  }
+  
+}
+
+/* 合作企业 */
+.sec-qiye {
+  .qiye {
+      background: url("../../static/img/资源 62.png");
+  }
+}
+
+/* 合作院校 */
+.sec-yuanxiao{
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 70px;
+  .yuanxiao{
+      margin: 0 auto;
+      width: 164px;
+      height: 34px;
+      background: url("../../static/img/资源 61.png");
+  }
+  .yuanxiao-list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 70px;
+      li{
+          margin-bottom: 13px;
+          a{
+              img{
+                  width: 230px;
+                  height: 160px;
+              }
+          }
+      }
+  }
+}
+
+/* footer */
+.footer-wrap{
+  margin-top: 30px;
+  background-color: #353535;
+  .footer-top-inner{
+      padding: 60px 0;
+      border-bottom: 1px solid #6d6d6d;
+      .footer-top {
+          width: 1200px;
+          margin: 0 auto;
+          .footer-top-list {
+              display: flex;
+              justify-content: space-between;
+              .footer-top-item {
+                  i{
+                      width: 122px;
+                      height: 122px;
+                      display: inline-block;
+                      background:url("../../static/img/资源 39.png") center center no-repeat;
+                  }
+                  
+                  h2{
+                      font-weight: 400;
+                      text-align: center;
+                      font-size: 24px;
+                      color: #ff941b;
+                      margin: 10px 0 10px 0;
+                  }
+                  p{
+                      text-align: center;
+                      color: #dcdcdc;
+                      font-size: 14px;
+                  }
+                  .xiangqing{
+                      margin-top: 10px;
+                      display: inline-block;
+                      text-align: center;
+                      width: 100px;
+                      height: 34px;
+                      line-height: 24px;
+                      padding: 5px 10px;
+                      border-radius: 34px;
+                      border: 1px solid #ff941b;
+                      color: #ff941b;  
+                      margin-left: 10px;
+                  }
+              }
+              .footer-top-item:nth-child(2){
+                  i{
+                      background-image:url("../../static/img/资源 40.png");
+                  }
+              }
+              .footer-top-item:nth-child(3){
+                  i{
+                      background-image:url("../../static/img/资源 41.png");
+                  }
+              }
+              .footer-top-item:last-child{
+                  i{
+                      background-image:url("../../static/img/资源 42.png");
+                  }
+              }
+          }
+      }
+  }
+  .footer-bottom {
+      color: #dcdcdc;
+      padding: 60px 0;
+      width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      .footer-left {
+          display: flex;
+          justify-content: space-between;
+          .footer-left-item {
+              width: 180px;
+              .footer-about {
+                  font-size: 14px;
+              }
+              .footer-left-list {
+                  li {
+                      margin: 5px 0;
+                  }
+              }
+          }
+      }
+      .footer-right {
+          h4{
+              margin: 10px 0 15px 0;
+          }
+
+      }
+}  
 }
