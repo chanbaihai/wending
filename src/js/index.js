@@ -3,6 +3,10 @@ import $ from 'jquery'
 if (process.env.NODE_ENV !== 'production') {
   require('../../index.html')
 }
+// nav 导航状态切换
+$('#nav li').click(()=>{
+  $(this).addClass('active').siblings().removeClass('active')
+})
 // 班级轮播
 let index = 0
 let length = $('.class-slide>li').length
