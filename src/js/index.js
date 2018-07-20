@@ -3,7 +3,7 @@ import $ from 'jquery'
 if (process.env.NODE_ENV !== 'production') {
   require('../../index.html')
 }
-// nav 导航状态切换
+// nav toggleclass
 $('#nav li').click(()=>{
   $(this).addClass('active').siblings().removeClass('active')
 })
