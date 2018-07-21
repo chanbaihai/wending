@@ -49,7 +49,7 @@ module.exports = {
         test: /\.scss$/,
         use: [
           {
-            loader: dev ? 'style-loader' : 'minicss.loader',
+            loader: dev ? 'style-loader' : minicss.loader,
             options:publicPath
           },
           'css-loader',

@@ -669,9 +669,17 @@ body {
     width: 286px;
     background-color: #fff;
     height: 290px; }
-    .heightsalary .displayitem .display-detail .moment-students .sdutent-list {
-      padding: 20px 10px;
-      flex-grow: 1; }
+    .heightsalary .displayitem .display-detail .moment-students #studentlist-container {
+      overflow: hidden;
+      width: 100%;
+      padding: 10px 20px;
+      flex-grow: 1;
+      max-height: 220px; }
+      .heightsalary .displayitem .display-detail .moment-students #studentlist-container ul {
+        width: 100%; }
+        .heightsalary .displayitem .display-detail .moment-students #studentlist-container ul li {
+          width: 100%;
+          margin-bottom: 17px; }
     .heightsalary .displayitem .display-detail .moment-students .title {
       width: 100%;
       justify-content: center;
@@ -754,8 +762,8 @@ body {
             display: block; }
           .honerstudent-list > div:hover .student-photo .play-container .play {
             width: 82px;
-            height: 82px;
-            background: url(../assets/play-big.png) no-repeat center/cover; }
+            height: 86px;
+            background: url(../assets/play-big.png) no-repeat center/100% 100%; }
         .honerstudent-list > div:hover .student-photo .photo {
           opacity: 0.65; }
         .honerstudent-list > div:hover .student-photo + .student-info + .student-word {
@@ -919,6 +927,7 @@ body {
     height: 400px;
     border-radius: 10px; }
   .free-course .free-list .free-item .student {
+    overflow: hidden;
     background-color: #fff;
     width: 286px;
     height: 400px; }
@@ -930,6 +939,9 @@ body {
       .free-course .free-list .free-item .student .title h1 {
         font-size: 22px;
         font-weight: 600; }
+    .free-course .free-list .free-item .student .student-words-container {
+      height: 340px;
+      overflow: hidden; }
     .free-course .free-list .free-item .student .student-words {
       padding-top: 10px; }
       .free-course .free-list .free-item .student .student-words .words-item {
@@ -942,8 +954,6 @@ body {
           bottom: 0;
           right: 0;
           background-color: #dcdddd; }
-        .free-course .free-list .free-item .student .student-words .words-item:last-child:after {
-          background-color: transparent; }
       .free-course .free-list .free-item .student .student-words .words {
         cursor: pointer;
         line-height: 2em;
@@ -1291,6 +1301,12 @@ img {
         padding: 20px 25px;
         display: flex;
         justify-content: space-between; }
+        .news-wrap .news-inner .hangye .hangye-middle .middle-img {
+          overflow: hidden; }
+          .news-wrap .news-inner .hangye .hangye-middle .middle-img img {
+            transition: .5s; }
+            .news-wrap .news-inner .hangye .hangye-middle .middle-img img:hover {
+              transform: scale(1.2); }
         .news-wrap .news-inner .hangye .hangye-middle .middle-content {
           width: 290px; }
           .news-wrap .news-inner .hangye .hangye-middle .middle-content h3 {
@@ -1324,7 +1340,7 @@ img {
 
 /* 合作企业 */
 .sec-qiye .qiye {
-  background: url("../assets/资源 62.png"); }
+  background: url("../assets/资源 61.png") !important; }
 
 /* 合作院校 */
 .sec-yuanxiao {
@@ -1335,7 +1351,7 @@ img {
     margin: 0 auto;
     width: 164px;
     height: 34px;
-    background: url("../assets/资源 61.png"); }
+    background: url(../assets/cooperative-company.png); }
   .sec-yuanxiao .yuanxiao-list {
     display: flex;
     justify-content: space-between;
