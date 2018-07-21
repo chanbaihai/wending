@@ -5,7 +5,16 @@ const optimizecss = require('optimize-css-assets-webpack-plugin')
 const htmlplugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 const cleanwebpack = require('clean-webpack-plugin')
-let env = process.env.NODE_ENV
+let dev = process.env.NODE_ENV !== 'production'
+let publicPath
+if (dev) {
+  publicPath = {
+  }
+}else{
+  publicPath={
+    publicPath:'../'
+  }
+}
 module.exports = {
   mode: 'development',
   entry: {
@@ -14,30 +23,39 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './docs'),
     filename: 'js/[name].js',
-    publicPath: env==='production'?'./':''
+    publicPath: dev ? '' : './'
   },
   stats: 'errors-only',
   resolve: {
     extensions: ['*', '.css', '.scss', '.js', '.vue', '.json', '.ts'],
-    alias:{
-      '@':path.resolve(__dirname,'/src')
+    alias: {
+      '@': path.resolve(__dirname, '/src')
     }
   },
   module: {
     rules: [
       { test: /\.js$/, loader: 'babel-loader' },
-      { test: /\.css$/, use: [{
-        loader:minicss.loader,
-        options:{
-          publicPath:'../'
-        }
-      }, 'css-loader'] },
-      { test: /\.scss$/, use: [{
-        loader:minicss.loader,
-        options:{
-          publicPath:'../'
-        }
-      }, 'css-loader', 'sass-loader'] },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: dev ? 'style-loader' : 'minicss.loader',
+            options: publicPath
+          },
+          'css-loader'
+        ]
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: dev ? 'style-loader' : 'minicss.loader',
+            options:publicPath
+          },
+          'css-loader',
+          'sass-loader'
+        ]
+      },
       {
         test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2|svg|svgz)$/i,
         loader: 'url-loader',
@@ -55,30 +73,32 @@ module.exports = {
           }
           // other vue-loader options go here
         }
-      },{test:/\.html$/,loader:env==='production'?'html-url-loader':'raw-loader'}
+      },
+      { test: /\.html$/, loader: dev ? 'raw-loader' : 'html-url-loader' }
     ]
   },
-  devtool:'source-map',
+  devtool: 'source-map',
   devServer: {
-    inline:true,
+    inline: true,
     hot: true,
     open: true,
-    overlay:{
-      warnings:false,
-      errors:true
+    overlay: {
+      warnings: false,
+      errors: true
     }
   },
   plugins: [
-    new cleanwebpack('dist/*.*',{
-      root:__dirname,
-      verbose:true,
-      dry:true
+    new cleanwebpack('dist/*.*', {
+      root: __dirname,
+      verbose: true,
+      dry: true
     }),
     new minicss({
-      filename: process.env.NODE_ENV==='production'?'/css/[name].css':'[name].css'
+      filename:
+        process.env.NODE_ENV === 'production' ? '/css/[name].css' : '[name].css'
     }),
     new htmlplugin({
-      template:path.resolve(__dirname, 'index.html'),
+      template: path.resolve(__dirname, 'index.html')
     }),
     new webpack.HotModuleReplacementPlugin()
   ],

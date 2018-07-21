@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "cross-env NODE_ENV=production webpack  -d",
-    "serve": "webpack-dev-server",
-    "start": "concurrently  \"npm run server\"  \"npm run webpack\""
+    "build": "cross-env NODE_ENV=production webpack  -d",
+    "start": "webpack-dev-server"
   },
   "keywords": [],
   "author": "",
