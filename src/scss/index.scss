@@ -92,9 +92,21 @@
         width: 286px;
         background-color: #fff;
         height: 290px;
-        .sdutent-list {
-          padding: 20px 10px;
+        #studentlist-container {
+          overflow: hidden;
+          #studentlist-container2{
+          }
+          width: 100%;
+          padding: 10px 20px;
           flex-grow: 1;
+          max-height: 220px;
+          ul{
+            width: 100%;
+            li{
+              width: 100%;
+              margin-bottom: 17px;
+            }
+          }
         }
         .title {
           width: 100%;
@@ -201,8 +213,8 @@
           }
           .play {
             width: 82px;
-            height: 82px;
-            background: url('../../static/img/play-big.png') no-repeat center/cover;
+            height: 86px;
+            background: url('../../static/img/play-big.png') no-repeat center/100% 100%;
           }
         }
         .photo {
@@ -434,6 +446,7 @@
         border-radius: 10px;
       }
       .student {
+        overflow: hidden;
         background-color: #fff;
         width: 286px;
         height: 400px;
@@ -448,6 +461,10 @@
             font-weight: 600;
           }
         }
+        .student-words-container{
+          height: 340px;
+          overflow: hidden;
+        }
         .student-words {
           padding-top: 10px;
           .words-item{
@@ -461,11 +478,11 @@
               right: 0;
               background-color: $border;
             }
-            &:last-child{
-              &:after{
-                background-color: transparent;
-              }
-            }
+            // &:last-child{
+            //   &:after{
+            //     background-color: transparent;
+            //   }
+            // }
           }
           .words{
             cursor: pointer;
@@ -916,6 +933,15 @@ img{
               padding: 20px 25px;
               display: flex;
               justify-content: space-between;
+              .middle-img{
+                overflow: hidden;
+                img{
+                  transition: .5s;
+                  &:hover{
+                    transform: scale(1.2)
+                  }
+                }
+              }
               .middle-content {
                   width: 290px;
                   h3{
@@ -971,7 +997,7 @@ img{
 /* 合作企业 */
 .sec-qiye {
   .qiye {
-      background: url("../../static/img/资源 62.png");
+      background: url("../../static/img/资源 61.png") !important;
   }
 }
 
@@ -984,7 +1010,7 @@ img{
       margin: 0 auto;
       width: 164px;
       height: 34px;
-      background: url("../../static/img/资源 61.png");
+      background: url("../../static/img/cooperative-company.png");
   }
   .yuanxiao-list {
       display: flex;
