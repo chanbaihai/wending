@@ -61,7 +61,7 @@ $(() => {
   )
 })
 
-//
+//三个学生留言向上滚动
 let wordsWrap = $('.student-words-container')
 let list = $('.words1')
 let list2 = $('.words2')
