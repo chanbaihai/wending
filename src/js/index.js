@@ -6,6 +6,8 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 // nav toggleclass
+
+
 $(() => {
   $('#nav>li').click(function () {
     $(this)
