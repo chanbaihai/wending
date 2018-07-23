@@ -39,8 +39,13 @@
         &:hover {
           a {
             background-color: #efefef;
-            border-bottom: 2px solid #9fc105;
             color: $titlefc;
+            border-bottom: 4px solid #efefef;
+          }
+        }
+        &.active{
+          a{
+            border-bottom: 4px solid #9fc105;
           }
         }
         a {
@@ -48,7 +53,7 @@
           height: 44px;
           text-align: center;
           line-height: 44px;
-          font-size: 14px;
+          font-size: 16px;
           color: $contentfc;
           display: block;
         }
@@ -96,8 +101,6 @@
         height: 290px;
         #studentlist-container {
           overflow: hidden;
-          #studentlist-container2{
-          }
           width: 100%;
           padding: 10px 20px;
           flex-grow: 1;
@@ -156,6 +159,16 @@
             dl {
               align-self: flex-start;
             }
+            &.kw05{
+              .line{
+                background-color: #ff4a4a;
+              }
+            }
+            &.kd05{
+              .line{
+                background-color: #ff9515;
+              }
+            }
             .line {
               width: 40px;
               height: 4px;
@@ -164,8 +177,16 @@
             }
           }
         }
+        &:hover{
+          .pre-arrow,
+        .next-arrow{
+          opacity: 1;
+        }
+        }
         .pre-arrow,
         .next-arrow {
+          transition: .5s;
+          opacity: 0;
           width: 36px;
           height: 34px;
           top: calc(50% - 17px);
@@ -202,7 +223,7 @@
     transition: all 0.5s;
     &:hover {
       cursor: pointer;
-      transform: translateY(-30px);
+      transform: translateY(-10px);
       box-shadow: 6px 6px 6px #e1e7c7;
       .student-photo {
         height: 80%;
@@ -247,7 +268,7 @@
         .play {
           width: 54px;
           height: 54px;
-          background: url('../../static/img/play-small.png') no-repeat center/cover;
+          background: url('../../static/img/play-small.png') no-repeat center/100% 100%;
         }
       }
       .photo {
@@ -294,7 +315,7 @@
   width: 100%;
   .hr-item {
     border-radius: 10px;
-    width: 388px;
+    width: 360px;
     height: 220px;
     background-color: #fff;
     position: relative;
@@ -355,6 +376,8 @@
   }
 }
 // course
+
+
 .awesome-course {
   .course-list {
     width: 100%;
@@ -377,7 +400,7 @@
       background-color: #fff;
       transition: 0.5s;
       &:hover {
-        transform: translateY(-30px);
+        transform: translateY(-10px);
         box-shadow: 6px 6px 6px #e1e7c7;
       }
       border-radius: 10px;
@@ -480,11 +503,6 @@
               right: 0;
               background-color: $border;
             }
-            // &:last-child{
-            //   &:after{
-            //     background-color: transparent;
-            //   }
-            // }
           }
           .words{
             cursor: pointer;
@@ -556,6 +574,9 @@
           width: 141px;
           height: 41px;
           background: url('../../static/img/ui-all.png') no-repeat center center/100%;
+          &:hover{
+            background: url('../../static/img/ui-all-active.png') no-repeat center center/100%;
+          }
         }
       }
     }
@@ -564,7 +585,7 @@
 
 
 .company-project{
-  margin-bottom: 50px;
+  margin-bottom: 70px;
   .project{
     .project-list-con{
       width: 100%;
@@ -736,7 +757,7 @@ img{
       margin-top: 70px;
       .liucheng-item {
           margin-right: 40px;
-          margin-bottom: 50px;
+          margin-bottom: 70px;
           position: relative;
           text-align: center;
           width: 260px;
@@ -760,6 +781,10 @@ img{
               height: 30px;
               border-radius: 30px;
               border: 1px solid #fe9515;
+              &:hover{
+                background-color: #fe9515;
+                color: #fff;
+              }
           }
           .arrow {
               position: absolute;
@@ -821,8 +846,9 @@ img{
                   padding: 20px 25px;
                   display: flex;
                   .pic{
-                      width: 120px;
-                      height: 120px;
+                      width: 100px;
+                      height: 100px;
+                      background: url("../../static/img/hr-photo.png" ) no-repeat center/100% 100%;
                   }
                   .teacher-info{
                       margin-left: 16px;
@@ -830,7 +856,7 @@ img{
                           display: flex;
                           justify-content: space-around;
                           .name{
-                            font-size: 24px;
+                            font-size: 22px;
                               font-weight: 400;
                           }
                           .exprience {

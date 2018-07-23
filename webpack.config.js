@@ -52,7 +52,13 @@ module.exports = {
             loader: dev ? 'style-loader' : minicss.loader,
             options:publicPath
           },
-          'css-loader',
+          {
+            loader:'css-loader',
+            options:{
+              importLoaders:1
+            }
+          },
+          'postcss-loader',
           'sass-loader'
         ]
       },
@@ -88,6 +94,11 @@ module.exports = {
     }
   },
   plugins: [
+    new optimizecss({
+      assetNameRegExp: /\.css$/i,
+      cssProcessor: require('cssnano'),
+      canPrint: true
+    }),
     new cleanwebpack('dist/*.*', {
       root: __dirname,
       verbose: true,
@@ -118,8 +129,7 @@ module.exports = {
         cache: true,
         parallel: true,
         sourceMap: true
-      }),
-      new optimizecss({})
+      })
     ]
   }
 }
