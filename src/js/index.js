@@ -157,3 +157,9 @@ $(() => {
     jq.css('transform', `translateX(-${dis}%)`)
   }
 })
+// tab 切换
+$('.project-title>div').click(function(){
+  let index = $(this).index()
+  $(this).addClass('active').siblings().removeClass('active')
+  $('.project-list').eq(index).addClass('active').siblings().removeClass('active')
+})
