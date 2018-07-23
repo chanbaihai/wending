@@ -7,7 +7,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 // nav toggleclass
 $(() => {
-  $('#nav>li').click(function() {
+  $('#nav>li').click(function () {
     $(this)
       .addClass('active')
       .siblings()
@@ -20,12 +20,13 @@ $(() => {
   let length = $('.class-slide>li').length
   $('.pre-arrow').click(() => {
     index <= 0 ? (index = length - 4) : index--
-    translate($('.class-slide'), index)
+      translate($('.class-slide'), index)
   })
   $('.next-arrow').click(() => {
     index >= length - 4 ? (index = 0) : index++
-    translate($('.class-slide'), index)
+      translate($('.class-slide'), index)
   })
+
   function translate(jq, index) {
     let dis = index * 25
     jq.css('transform', `translateX(-${dis}%)`)
@@ -39,6 +40,7 @@ $(() => {
   let list2 = $('#student-list2')
   let height = list.height()
   list2.html(list.html())
+
   function moveUP() {
     if (listWrap[0].scrollTop >= height) {
       listWrap[0].scrollTop = 0
@@ -67,6 +69,7 @@ let list = $('.words1')
 let list2 = $('.words2')
 let height = list.height()
 list2.html(list.html())
+
 function moveUP(i) {
   if (wordsWrap[i].scrollTop >= height) {
     wordsWrap[i].scrollTop = 0
@@ -129,12 +132,18 @@ new Swiper('#swiperBanner', {
 
 // liqianmin  老师轮播
 $(() => {
+
   let index = 0
   let length = $('.teacher-item').length
+  for (let i = 0; i < (length/3); i++) {
+    $(".point").append(`<li></li>`)
+  }
+  $(".point li:first-of-type").addClass('active')
 
   $('.prev').click(() => {
-    index <= 0 ? (index = Math.floor((length - 4) / 3) + 1) : index--
-    translate($('.teacher-list'), index)
+    index <= 0 ? index = Math.floor((length - 4) / 3 + 1) : index--
+
+      translate($('.teacher-list'), index)
     $('.point>li')
       .eq(index)
       .addClass('active')
@@ -143,8 +152,9 @@ $(() => {
   })
 
   $('.next').click(() => {
-    index > Math.floor((length - 4) / 3) ? (index = 0) : index++
-    translate($('.teacher-list'), index)
+    index > Math.floor((length - 4) / 3) ? index = 0 : index++
+
+      translate($('.teacher-list'), index)
     $('.point>li')
       .eq(index)
       .addClass('active')
@@ -156,9 +166,19 @@ $(() => {
     let dis = 3 * index * 34.5
     jq.css('transform', `translateX(-${dis}%)`)
   }
+
+  $('.point>li').click(function () {
+    $(this)
+      .addClass('active')
+      .siblings()
+      .removeClass('active')
+    let i = $(this).index()
+    translate($('.teacher-list'), i)
+  })
+
 })
 // tab 切换
-$('.project-title>div').click(function(){
+$('.project-title>div').click(function () {
   let index = $(this).index()
   $(this).addClass('active').siblings().removeClass('active')
   $('.project-list').eq(index).addClass('active').siblings().removeClass('active')
