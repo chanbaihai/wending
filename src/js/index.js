@@ -4,9 +4,7 @@ import $ from 'jquery'
 if (process.env.NODE_ENV !== 'production') {
   require('../../index.html')
 }
-
 // nav toggleclass
-
 
 $(() => {
   $('#nav>li').click(function () {
