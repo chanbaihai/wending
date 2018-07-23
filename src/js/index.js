@@ -135,7 +135,7 @@ $(() => {
 
   let index = 0
   let length = $('.teacher-item').length
-  for (let i = 0; i < (length/3); i++) {
+  for (let i = 0; i < (length / 3); i++) {
     $(".point").append(`<li></li>`)
   }
   $(".point li:first-of-type").addClass('active')
