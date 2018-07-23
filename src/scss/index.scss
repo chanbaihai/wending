@@ -3,6 +3,8 @@
 .headerwrap{
   background-color: #fff;
 }
+
+
 .header {
   padding: 10px 0 0;
   .logo {
@@ -933,6 +935,7 @@ img{
           height: 16px;
           border-radius: 50%;
           background-color: #a2a2a2;
+          cursor: pointer;
       }
       .point li.active {
           background-color: #9ab506;
