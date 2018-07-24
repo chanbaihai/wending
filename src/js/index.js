@@ -6,6 +6,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 import template from './template'
 
+//生成header和footer
 class Index extends template{
   constructor(){
     super()
