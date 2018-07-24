@@ -4,9 +4,16 @@ import $ from 'jquery'
 if (process.env.NODE_ENV !== 'production') {
   require('../pages/index.html')
 }
+import template from './template'
 
+class Index extends template{
+  constructor(){
+    super()
+    this.render(this.header('index'))
+  }
+}
+new Index()
 // nav toggleclass
-
 
 $(() => {
   $('#nav>li').click(function () {

@@ -763,6 +763,96 @@ body {
       color: #6d6d6d;
       display: block; }
 
+/* footer */
+.footer-wrap {
+  margin-top: 30px;
+  background-color: #353535; }
+  .footer-wrap .footer-top-inner {
+    padding: 60px 0;
+    border-bottom: 1px solid #6d6d6d; }
+    .footer-wrap .footer-top-inner .footer-top {
+      width: 1200px;
+      margin: 0 auto; }
+      .footer-wrap .footer-top-inner .footer-top .footer-top-list {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+           -moz-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; }
+        .footer-wrap .footer-top-inner .footer-top .footer-top-list .footer-top-item i {
+          width: 122px;
+          height: 122px;
+          display: inline-block;
+          background: url("../assets/资源 39.png") center center no-repeat; }
+        .footer-wrap .footer-top-inner .footer-top .footer-top-list .footer-top-item h2 {
+          font-weight: 400;
+          text-align: center;
+          font-size: 24px;
+          color: #ff941b;
+          margin: 10px 0 10px 0; }
+        .footer-wrap .footer-top-inner .footer-top .footer-top-list .footer-top-item p {
+          text-align: center;
+          color: #dcdcdc;
+          font-size: 14px; }
+        .footer-wrap .footer-top-inner .footer-top .footer-top-list .footer-top-item .xiangqing {
+          margin-top: 10px;
+          display: inline-block;
+          text-align: center;
+          width: 100px;
+          height: 34px;
+          line-height: 24px;
+          padding: 5px 10px;
+          -moz-border-radius: 34px;
+               border-radius: 34px;
+          border: 1px solid #ff941b;
+          color: #ff941b;
+          margin-left: 10px; }
+        .footer-wrap .footer-top-inner .footer-top .footer-top-list .footer-top-item:nth-child(2) i {
+          background-image: url("../assets/资源 40.png"); }
+        .footer-wrap .footer-top-inner .footer-top .footer-top-list .footer-top-item:nth-child(3) i {
+          background-image: url("../assets/资源 41.png"); }
+        .footer-wrap .footer-top-inner .footer-top .footer-top-list .footer-top-item:last-child i {
+          background-image: url("../assets/资源 42.png"); }
+  .footer-wrap .footer-bottom {
+    color: #dcdcdc;
+    padding: 60px 0;
+    width: 1200px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .footer-wrap .footer-bottom .footer-left {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+         -moz-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .footer-wrap .footer-bottom .footer-left .footer-left-item {
+        width: 180px; }
+        .footer-wrap .footer-bottom .footer-left .footer-left-item .footer-about {
+          font-size: 14px; }
+        .footer-wrap .footer-bottom .footer-left .footer-left-item .footer-left-list li {
+          margin: 5px 0; }
+    .footer-wrap .footer-bottom .footer-right h4 {
+      margin: 10px 0 15px 0; }
+
 .swiper-container {
   height: 600px; }
 
@@ -1737,94 +1827,4 @@ img {
       .sec-yuanxiao .yuanxiao-list li a img {
         width: 230px;
         height: 160px; }
-
-/* footer */
-.footer-wrap {
-  margin-top: 30px;
-  background-color: #353535; }
-  .footer-wrap .footer-top-inner {
-    padding: 60px 0;
-    border-bottom: 1px solid #6d6d6d; }
-    .footer-wrap .footer-top-inner .footer-top {
-      width: 1200px;
-      margin: 0 auto; }
-      .footer-wrap .footer-top-inner .footer-top .footer-top-list {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: justify;
-        -webkit-justify-content: space-between;
-           -moz-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between; }
-        .footer-wrap .footer-top-inner .footer-top .footer-top-list .footer-top-item i {
-          width: 122px;
-          height: 122px;
-          display: inline-block;
-          background: url("../assets/资源 39.png") center center no-repeat; }
-        .footer-wrap .footer-top-inner .footer-top .footer-top-list .footer-top-item h2 {
-          font-weight: 400;
-          text-align: center;
-          font-size: 24px;
-          color: #ff941b;
-          margin: 10px 0 10px 0; }
-        .footer-wrap .footer-top-inner .footer-top .footer-top-list .footer-top-item p {
-          text-align: center;
-          color: #dcdcdc;
-          font-size: 14px; }
-        .footer-wrap .footer-top-inner .footer-top .footer-top-list .footer-top-item .xiangqing {
-          margin-top: 10px;
-          display: inline-block;
-          text-align: center;
-          width: 100px;
-          height: 34px;
-          line-height: 24px;
-          padding: 5px 10px;
-          -moz-border-radius: 34px;
-               border-radius: 34px;
-          border: 1px solid #ff941b;
-          color: #ff941b;
-          margin-left: 10px; }
-        .footer-wrap .footer-top-inner .footer-top .footer-top-list .footer-top-item:nth-child(2) i {
-          background-image: url("../assets/资源 40.png"); }
-        .footer-wrap .footer-top-inner .footer-top .footer-top-list .footer-top-item:nth-child(3) i {
-          background-image: url("../assets/资源 41.png"); }
-        .footer-wrap .footer-top-inner .footer-top .footer-top-list .footer-top-item:last-child i {
-          background-image: url("../assets/资源 42.png"); }
-  .footer-wrap .footer-bottom {
-    color: #dcdcdc;
-    padding: 60px 0;
-    width: 1200px;
-    margin: 0 auto;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-       -moz-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
-    .footer-wrap .footer-bottom .footer-left {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -webkit-justify-content: space-between;
-         -moz-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between; }
-      .footer-wrap .footer-bottom .footer-left .footer-left-item {
-        width: 180px; }
-        .footer-wrap .footer-bottom .footer-left .footer-left-item .footer-about {
-          font-size: 14px; }
-        .footer-wrap .footer-bottom .footer-left .footer-left-item .footer-left-list li {
-          margin: 5px 0; }
-    .footer-wrap .footer-bottom .footer-right h4 {
-      margin: 10px 0 15px 0; }
 
