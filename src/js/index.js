@@ -134,6 +134,7 @@ new Swiper('#swiperBanner', {
 $(() => {
 
   let index = 0
+  let i
   let length = $('.teacher-item').length
   for (let i = 0; i < (length / 3); i++) {
     $('.point').append('<li></li>')
@@ -172,10 +173,9 @@ $(() => {
       .addClass('active')
       .siblings()
       .removeClass('active')
-    let i = $(this).index()
+    i = $(this).index()
     translate($('.teacher-list'), i)
   })
-
 })
 // tab 切换
 $('.project-title>div').click(function () {
