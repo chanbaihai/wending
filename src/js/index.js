@@ -2,7 +2,7 @@ import '../scss/index.scss'
 import Swiper from './swiper.js'
 import $ from 'jquery'
 if (process.env.NODE_ENV !== 'production') {
-  require('../../index.html')
+  require('../pages/index.html')
 }
 // nav toggleclass
 
@@ -20,11 +20,11 @@ $(() => {
   let length = $('.class-slide>li').length
   $('.pre-arrow').click(() => {
     index <= 0 ? (index = length - 4) : index--
-      translate($('.class-slide'), index)
+    translate($('.class-slide'), index)
   })
   $('.next-arrow').click(() => {
     index >= length - 4 ? (index = 0) : index++
-      translate($('.class-slide'), index)
+    translate($('.class-slide'), index)
   })
 
   function translate(jq, index) {
@@ -136,14 +136,14 @@ $(() => {
   let index = 0
   let length = $('.teacher-item').length
   for (let i = 0; i < (length / 3); i++) {
-    $(".point").append(`<li></li>`)
+    $('.point').append('<li></li>')
   }
-  $(".point li:first-of-type").addClass('active')
+  $('.point li:first-child').addClass('active')
 
   $('.prev').click(() => {
     index <= 0 ? index = Math.floor((length - 4) / 3 + 1) : index--
 
-      translate($('.teacher-list'), index)
+    translate($('.teacher-list'), index)
     $('.point>li')
       .eq(index)
       .addClass('active')
@@ -154,7 +154,7 @@ $(() => {
   $('.next').click(() => {
     index > Math.floor((length - 4) / 3) ? index = 0 : index++
 
-      translate($('.teacher-list'), index)
+    translate($('.teacher-list'), index)
     $('.point>li')
       .eq(index)
       .addClass('active')

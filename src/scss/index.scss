@@ -224,7 +224,7 @@
     &:hover {
       cursor: pointer;
       transform: translateY(-10px);
-      box-shadow: 6px 6px 6px #e1e7c7;
+      box-shadow: 6px 6px 6px #e1e7c7,-6px 6px 6px #e1e7c7;
       .student-photo {
         height: 80%;
         .play-container {
@@ -401,7 +401,7 @@
       transition: 0.5s;
       &:hover {
         transform: translateY(-10px);
-        box-shadow: 6px 6px 6px #e1e7c7;
+        box-shadow: 6px 6px 6px #e1e7c7,-6px 6px 6px #e1e7c7;
       }
       border-radius: 10px;
       overflow: hidden;
