@@ -5,7 +5,6 @@ if (process.env.NODE_ENV !== 'production') {
   require('../pages/index.html')
 }
 // nav toggleclass
-
 $(() => {
   $('#nav>li').click(function () {
     $(this)
