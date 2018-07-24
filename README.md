@@ -10,7 +10,9 @@
 3. npm run build
     > 打包文件
 ### 4. 👉 配置文件为config文件夹，html模板为src/pages文件夹,增加页面需要在config/pages.js里面添加相应的入口，并在src/pages,src/js新建相应名字的html和js
-```
+```  
+ //  config/pages.js  
+ 
 const htmlplugin = require('html-webpack-plugin')  
 
 const path = require('path')  
