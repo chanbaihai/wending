@@ -19,11 +19,14 @@ const path = require('path')
 
 👉 let pages = ['index']  //增加的html的name添加在这里  
 
-//比如我要增加center.html页面，则let pages=['index','center']，然后再src/pages新建center.html,  
+//比如我要增加center.html页面，则   
+1. let pages=['index','center']   
 
-src/js新建center.js 样式文件在center.js中import  
+2. 在src/pages新建center.html,  
 
-可自动加载html模板引入相应的样式和js  
+3. 在src/js新建center.js   
+
+4. 样式文件在center.js中import 就可自动加载html模板引入相应的样式和js  
 
 let htmls = [],  
 
