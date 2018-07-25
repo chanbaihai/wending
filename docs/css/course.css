@@ -1,0 +1,397 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-size: 14px;
+  border: none; }
+
+.flex {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.wrap {
+  width: 100%; }
+
+.container {
+  width: 1200px;
+  margin: 0 auto; }
+
+body {
+  overflow-x: hidden;
+  background-color: #efefef; }
+
+.display-title {
+  height: 180px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.bigfont {
+  font-size: 22px;
+  color: #ff7a17; }
+
+.titlefont {
+  font-size: 22px;
+  color: #353535; }
+
+.headerwrap {
+  background-color: #fff; }
+
+.header {
+  padding: 10px 0 0; }
+  .header .logo span {
+    color: #888;
+    font-size: 24px;
+    font-weight: 600; }
+  .header .logo span {
+    margin-top: 16px;
+    margin-left: 10px; }
+  .header .nav {
+    margin-top: 20px;
+    font-size: 18px; }
+    .header .nav .user > div {
+      margin-right: 10px;
+      background: url(../assets/user-photo.png) no-repeat center/cover;
+      -moz-border-radius: 50%;
+           border-radius: 50%;
+      width: 40px;
+      height: 40px; }
+    .header .nav .user span {
+      font-size: 14px;
+      color: #6d6d6d; }
+    .header .nav ul li.active a, .header .nav ul li:hover a {
+      background-color: #efefef;
+      color: #353535;
+      border-bottom: 4px solid #efefef; }
+    .header .nav ul li.active a {
+      border-bottom: 4px solid #9fc105; }
+    .header .nav ul li a {
+      width: 98px;
+      height: 44px;
+      text-align: center;
+      line-height: 44px;
+      font-size: 18px;
+      color: #353535;
+      display: block; }
+
+/* footer */
+.footer-wrap {
+  margin-top: 30px;
+  background-color: #353535; }
+  .footer-wrap .footer-top-inner {
+    padding: 60px 0;
+    border-bottom: 1px solid #6d6d6d; }
+    .footer-wrap .footer-top-inner .footer-top {
+      width: 1200px;
+      margin: 0 auto; }
+      .footer-wrap .footer-top-inner .footer-top .footer-top-list {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+           -moz-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; }
+        .footer-wrap .footer-top-inner .footer-top .footer-top-list .footer-top-item i {
+          width: 122px;
+          height: 122px;
+          display: inline-block;
+          background: url("../assets/资源 39.png") center center no-repeat; }
+        .footer-wrap .footer-top-inner .footer-top .footer-top-list .footer-top-item h2 {
+          font-weight: 400;
+          text-align: center;
+          font-size: 24px;
+          color: #ff7a17;
+          margin: 10px 0 10px 0; }
+        .footer-wrap .footer-top-inner .footer-top .footer-top-list .footer-top-item p {
+          text-align: center;
+          color: #dcdcdc;
+          font-size: 14px; }
+        .footer-wrap .footer-top-inner .footer-top .footer-top-list .footer-top-item .xiangqing {
+          margin-top: 10px;
+          display: inline-block;
+          text-align: center;
+          width: 100px;
+          height: 34px;
+          line-height: 24px;
+          padding: 5px 10px;
+          -moz-border-radius: 34px;
+               border-radius: 34px;
+          border: 1px solid #ff7a17;
+          color: #ff7a17;
+          margin-left: 10px; }
+        .footer-wrap .footer-top-inner .footer-top .footer-top-list .footer-top-item:nth-child(2) i {
+          background-image: url("../assets/资源 40.png"); }
+        .footer-wrap .footer-top-inner .footer-top .footer-top-list .footer-top-item:nth-child(3) i {
+          background-image: url("../assets/资源 41.png"); }
+        .footer-wrap .footer-top-inner .footer-top .footer-top-list .footer-top-item:last-child i {
+          background-image: url("../assets/资源 42.png"); }
+  .footer-wrap .footer-bottom {
+    color: #dcdcdc;
+    padding: 60px 0;
+    width: 1200px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .footer-wrap .footer-bottom .footer-left {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+         -moz-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .footer-wrap .footer-bottom .footer-left .footer-left-item {
+        width: 180px; }
+        .footer-wrap .footer-bottom .footer-left .footer-left-item .footer-about {
+          font-size: 14px; }
+        .footer-wrap .footer-bottom .footer-left .footer-left-item .footer-left-list li {
+          margin: 5px 0; }
+    .footer-wrap .footer-bottom .footer-right h4 {
+      margin: 10px 0 15px 0; }
+
+.col {
+  color: #ff7a17; }
+
+.four-ui-cen-bot-img:hover, .four-java-cen-bot-img:hover, .four-web-cen-bot-img:hover {
+  background: url(../assets/course-mask.png) no-repeat center/100% 100% !important; }
+
+.four-banner {
+  width: 100%;
+  height: 100%;
+  background: #efefef;
+  border: 1px solid #efefef; }
+  .four-banner .four-banner-cen {
+    width: 1200px;
+    height: 350px;
+    background: url(../assets/course-banner.png) no-repeat;
+    background-size: 100% 100%;
+    margin: 30px auto 0; }
+
+.four-ui {
+  width: 100%;
+  height: 100%;
+  background: #efefef;
+  border: 1px solid #efefef; }
+  .four-ui .four-ui-cen {
+    width: 1200px;
+    height: 600px;
+    margin: 0 auto 30px; }
+    .four-ui .four-ui-cen .four-ui-cen-top {
+      width: 1200px;
+      height: 60px;
+      line-height: 60px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .four-ui .four-ui-cen .four-ui-cen-top i {
+        width: 60px;
+        height: 60px;
+        background: url(../assets/ui.png) no-repeat;
+        background-size: 100% 100%; }
+      .four-ui .four-ui-cen .four-ui-cen-top span {
+        margin-left: 24px;
+        font-size: 26px; }
+    .four-ui .four-ui-cen .four-ui-cen-bot {
+      width: 1200px;
+      height: 500px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+         -moz-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap; }
+      .four-ui .four-ui-cen .four-ui-cen-bot li {
+        cursor: pointer;
+        width: 280px;
+        height: 230px;
+        border: 1px solid #dddddd; }
+        .four-ui .four-ui-cen .four-ui-cen-bot li .four-ui-cen-bot-img {
+          width: 280px;
+          height: 180px;
+          background: url(../assets/xueyuan.png) no-repeat;
+          background-size: 100% 100%; }
+        .four-ui .four-ui-cen .four-ui-cen-bot li .four-ui-cen-bot-tit {
+          width: 280px;
+          height: 30px;
+          padding: 2px 10px; }
+          .four-ui .four-ui-cen .four-ui-cen-bot li .four-ui-cen-bot-tit p {
+            margin-bottom: 2px; }
+
+.four-java {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border: 1px solid #efefef; }
+  .four-java .four-java-cen {
+    width: 1200px;
+    height: 850px;
+    margin: 0 auto 30px; }
+    .four-java .four-java-cen .four-java-cen-top {
+      width: 1200px;
+      height: 60px;
+      line-height: 60px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .four-java .four-java-cen .four-java-cen-top i {
+        width: 60px;
+        height: 60px;
+        background: url(../assets/java.png) no-repeat;
+        background-size: 100% 100%; }
+      .four-java .four-java-cen .four-java-cen-top span {
+        margin-left: 24px;
+        font-size: 26px; }
+    .four-java .four-java-cen .four-java-cen-bot {
+      width: 1200px;
+      height: 750px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+         -moz-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap; }
+      .four-java .four-java-cen .four-java-cen-bot li {
+        cursor: pointer;
+        width: 280px;
+        height: 230px;
+        border: 1px solid #dddddd; }
+        .four-java .four-java-cen .four-java-cen-bot li .four-java-cen-bot-img {
+          width: 280px;
+          height: 180px;
+          background: url(../assets/xueyuan.png) no-repeat;
+          background-size: 100% 100%; }
+        .four-java .four-java-cen .four-java-cen-bot li .four-java-cen-bot-tit {
+          width: 280px;
+          height: 30px;
+          padding: 2px 10px; }
+          .four-java .four-java-cen .four-java-cen-bot li .four-java-cen-bot-tit p {
+            margin-bottom: 2px; }
+
+.four-web {
+  width: 100%;
+  height: 100%;
+  background: #efefef;
+  border: 1px solid #efefef; }
+  .four-web .four-web-cen {
+    width: 1200px;
+    height: 700px;
+    margin: 0 auto 30px; }
+    .four-web .four-web-cen .four-web-cen-top {
+      width: 1200px;
+      height: 60px;
+      line-height: 60px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .four-web .four-web-cen .four-web-cen-top i {
+        width: 60px;
+        height: 60px;
+        background: url(../assets/kw.png) no-repeat;
+        background-size: 100% 100%; }
+      .four-web .four-web-cen .four-web-cen-top span {
+        margin-left: 24px;
+        font-size: 26px; }
+    .four-web .four-web-cen .four-web-cen-bot {
+      width: 1200px;
+      height: 500px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+         -moz-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap; }
+      .four-web .four-web-cen .four-web-cen-bot li {
+        cursor: pointer;
+        width: 280px;
+        height: 230px;
+        border: 1px solid #dddddd; }
+        .four-web .four-web-cen .four-web-cen-bot li .four-web-cen-bot-img {
+          width: 280px;
+          height: 180px;
+          background: url(../assets/xueyuan.png) no-repeat;
+          background-size: 100% 100%; }
+        .four-web .four-web-cen .four-web-cen-bot li .four-web-cen-bot-tit {
+          width: 280px;
+          height: 30px;
+          line-height: 20px;
+          padding: 2px 10px; }
+          .four-web .four-web-cen .four-web-cen-bot li .four-web-cen-bot-tit p {
+            margin-bottom: 2px; }
+
