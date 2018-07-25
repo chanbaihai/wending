@@ -73,7 +73,7 @@ $(() => {
   )
 })
 
-//三个学生留言向上滚动
+//学生留言向上滚动
 let wordsWrap = $('.student-words-container')
 let list = $('.words1')
 let list2 = $('.words2')
@@ -144,48 +144,43 @@ new Swiper('#swiperBanner', {
 $(() => {
 
   let index = 0
-  let i
-  let length = $('.teacher-item').length
-  for (let i = 0; i < (length / 3); i++) {
+  let length = Math.ceil($('.teacher-item').length/3)
+  for (let i = 0; i < length; i++) {
     $('.point').append('<li></li>')
   }
   $('.point li:first-child').addClass('active')
 
   $('.prev').click(() => {
-    index <= 0 ? index = Math.floor((length - 4) / 3 + 1) : index--
-
+    index <= 0 ? index = length -1 : index--
     translate($('.teacher-list'), index)
-    $('.point>li')
-      .eq(index)
-      .addClass('active')
-      .siblings()
-      .removeClass('active')
+    toggleclass(index)
   })
 
   $('.next').click(() => {
-    index > Math.floor((length - 4) / 3) ? index = 0 : index++
-
+    index >= length - 1? index = 0 : index++
     translate($('.teacher-list'), index)
+    toggleclass(index)
+  })
+  $('.point>li').click(function () {
+    index = $(this).index()
+    translate($('.teacher-list'), index)
+    toggleclass(index)
+  })
+  translate($('.teacher-list'), index)
+  toggleclass(index)
+  function toggleclass(index){
     $('.point>li')
       .eq(index)
       .addClass('active')
       .siblings()
       .removeClass('active')
-  })
-
+  }
   function translate(jq, index) {
-    let dis = 3 * index * 34.5
+    let dis =  index *100
     jq.css('transform', `translateX(-${dis}%)`)
   }
 
-  $('.point>li').click(function () {
-    $(this)
-      .addClass('active')
-      .siblings()
-      .removeClass('active')
-    i = $(this).index()
-    translate($('.teacher-list'), i)
-  })
+  
 })
 // tab 切换
 $('.project-title>div').click(function () {

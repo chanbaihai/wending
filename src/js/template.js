@@ -125,13 +125,13 @@ class Template {
 }
 
 const Router = {
-  index: '/index.html',
-  course: '/course.html',
-  teacher: '/teacher.html',
-  student: '/student.html',
-  join: '/join.html',
-  school: '/school.html',
-  forum: '/forum.html'
+  index: './index.html',
+  course: './course.html',
+  teacher: './teacher.html',
+  student: './student.html',
+  join: './join.html',
+  school: './school.html',
+  forum: './forum.html'
 }
 
 export default Template
