@@ -1,8 +1,6 @@
 const path = require('path')
 const minicss = require('mini-css-extract-plugin')
-const uglify = require('uglifyjs-webpack-plugin')
 const optimizecss = require('optimize-css-assets-webpack-plugin')
-const htmlplugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 const cleanwebpack = require('clean-webpack-plugin')
 const entry = require('./entries') //入口文件
@@ -42,7 +40,7 @@ module.exports = {
         test: /\.css$/,
         use: [
           {
-            loader: dev ? 'style-loader' : 'minicss.loader',
+            loader: dev ? 'style-loader' : minicss.loader,
             options: publicPath
           },
           'css-loader'
@@ -113,17 +111,18 @@ module.exports = {
     }),
     new webpack.HotModuleReplacementPlugin(),
     ...htmls.htmls
-  ]
-  // optimization: {
-  //   splitChunks: {
-  //     cacheGroups: {
-  //       commons: {
-  //         name: 'commons',
-  //         chunks: 'initial',
-  //         minChunks: 2
-  //       }
-  //     }
-  //   },
+  ],
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          name: 'commons',
+          chunks: 'initial',
+          minChunks: 2
+        }
+      }
+    }
+  }
   //   minimizer: [
   //     new uglify({
   //       cache: true,

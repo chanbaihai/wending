@@ -7,17 +7,37 @@ if (process.env.NODE_ENV !== 'production') {
 import template from './template'
 
 //生成header和footer
-class Index extends template{
-  constructor(){
+class Index extends template {
+  constructor() {
     super()
     this.render(this.header('index'))
   }
 }
 new Index()
-// nav toggleclass
+// 侧边按钮组
+;(function() {
+  let div = $('.swiper-container')[0]
+  let top
+  window.onscroll = () => {
+    top = div.getBoundingClientRect().top
+    if (top <= 0) {
+      $('.sidebutton').css({
+        opacity: 1
+      })
+    } else {
+      $('.sidebutton').css({
+        opacity: 0
+      })
+    }
+  }
+  $('.backtop').click(()=>{
+    $('body,html').animate({scrollTop:0},500)
+  })
 
+})()
+// nav toggleclass
 $(() => {
-  $('#nav>li').click(function () {
+  $('#nav>li').click(function() {
     $(this)
       .addClass('active')
       .siblings()
@@ -126,12 +146,12 @@ wordsWrap.eq(0).hover(
     }, 30)
   }
 )
-//
+//swiper
 new Swiper('#swiperBanner', {
   direction: 'horizontal',
   loop: true,
   autoplay: {
-    delay: 3000,
+    delay: 2000,
     disableOnInteraction: false
   },
   pagination: {
@@ -142,33 +162,32 @@ new Swiper('#swiperBanner', {
 
 // liqianmin  老师轮播
 $(() => {
-
   let index = 0
-  let length = Math.ceil($('.teacher-item').length/3)
+  let length = Math.ceil($('.teacher-item').length / 3)
   for (let i = 0; i < length; i++) {
     $('.point').append('<li></li>')
   }
   $('.point li:first-child').addClass('active')
 
   $('.prev').click(() => {
-    index <= 0 ? index = length -1 : index--
+    index <= 0 ? (index = length - 1) : index--
     translate($('.teacher-list'), index)
     toggleclass(index)
   })
 
   $('.next').click(() => {
-    index >= length - 1? index = 0 : index++
+    index >= length - 1 ? (index = 0) : index++
     translate($('.teacher-list'), index)
     toggleclass(index)
   })
-  $('.point>li').click(function () {
+  $('.point>li').click(function() {
     index = $(this).index()
     translate($('.teacher-list'), index)
     toggleclass(index)
   })
   translate($('.teacher-list'), index)
   toggleclass(index)
-  function toggleclass(index){
+  function toggleclass(index) {
     $('.point>li')
       .eq(index)
       .addClass('active')
@@ -176,15 +195,20 @@ $(() => {
       .removeClass('active')
   }
   function translate(jq, index) {
-    let dis =  index *100
+    let dis = index * 100
     jq.css('transform', `translateX(-${dis}%)`)
   }
-
-  
 })
 // tab 切换
-$('.project-title>div').click(function () {
+$('.project-title>div').click(function() {
   let index = $(this).index()
-  $(this).addClass('active').siblings().removeClass('active')
-  $('.project-list').eq(index).addClass('active').siblings().removeClass('active')
+  $(this)
+    .addClass('active')
+    .siblings()
+    .removeClass('active')
+  $('.project-list')
+    .eq(index)
+    .addClass('active')
+    .siblings()
+    .removeClass('active')
 })

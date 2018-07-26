@@ -2,7 +2,42 @@
 @import '../css/swiper.min.css';
 
 
-
+.sidebutton{
+  opacity: 0;
+  transition: .5s;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 50px;
+  height: 210px;
+  z-index: 999;
+  >div{
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    background-color: #a3a3a3 !important;
+    a{
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    &:hover,&.active{
+      background-color: #ff4a4a !important;
+    }
+    &:first-child{
+      background: url('../../static/img/message.png') no-repeat center;
+    }
+    &:nth-child(2){
+      background: url('../../static/img/query.png') no-repeat center;
+    }
+    &:nth-child(3){
+      background: url('../../static/img/wechat.png') no-repeat center;
+    }
+    &:last-child{
+      background: url('../../static/img/backtop.png') no-repeat center;
+    }
+  }
+}
 
 // swiper
 .swiper-container {
