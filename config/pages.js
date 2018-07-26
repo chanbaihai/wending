@@ -1,6 +1,6 @@
 const htmlplugin = require('html-webpack-plugin')
 const path = require('path')
-let pages = ['index','teacher','student','course','join']  //增加的html的name添加在这里
+let pages = ['index','teacher','student','course','join','courseDetail']  //增加的html的name添加在这里
 let htmls = [],
   html
 pages.forEach(page => {

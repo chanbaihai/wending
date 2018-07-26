@@ -1,4 +1,5 @@
 import template from './template'
+import $ from 'jquery'
 import '../scss/course.scss'
 import '../css/swiper.min.css'
 import Swiper from './swiper.js'
@@ -22,3 +23,12 @@ class  Course extends template{
   }
 }
 new Course()
+redirect($('.four-ui-cen-bot li'))
+redirect($('.four-java-cen-bot li'))
+redirect($('.four-web-cen-bot li'))
+function redirect(target){
+  target.click(()=>{
+    location.href='./courseDetail.html'
+  })
+}
+

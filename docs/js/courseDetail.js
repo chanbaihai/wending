@@ -757,7 +757,7 @@
 /******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 	// Promise = chunk loading, 0 = chunk loaded
 /******/ 	var installedChunks = {
-/******/ 		"join": 0
+/******/ 		"courseDetail": 0
 /******/ 	};
 /******/
 /******/ 	var deferredModules = [];
@@ -854,33 +854,44 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push(["./src/js/join.js","commons"]);
+/******/ 	deferredModules.push(["./src/js/courseDetail.js","commons"]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/js/join.js":
-/*!************************!*\
-  !*** ./src/js/join.js ***!
-  \************************/
+/***/ "./src/js/courseDetail.js":
+/*!********************************!*\
+  !*** ./src/js/courseDetail.js ***!
+  \********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _template2 = __webpack_require__(/*! ./template */ \"./src/js/template.js\");\n\nvar _template3 = _interopRequireDefault(_template2);\n\n__webpack_require__(/*! ../scss/join.scss */ \"./src/scss/join.scss\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\n//生成header和footer\nvar Join = function (_template) {\n  _inherits(Join, _template);\n\n  function Join() {\n    _classCallCheck(this, Join);\n\n    var _this = _possibleConstructorReturn(this, (Join.__proto__ || Object.getPrototypeOf(Join)).call(this));\n\n    _this.render(_this.header('join'));\n    return _this;\n  }\n\n  return Join;\n}(_template3.default);\n\nnew Join();//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvanMvam9pbi5qcy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9zcmMvanMvam9pbi5qcz9lNWIzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB0ZW1wbGF0ZSBmcm9tICcuL3RlbXBsYXRlJ1xyXG5pbXBvcnQgJy4uL3Njc3Mvam9pbi5zY3NzJ1xyXG5cclxuLy/nlJ/miJBoZWFkZXLlkoxmb290ZXJcclxuY2xhc3MgSm9pbiBleHRlbmRzIHRlbXBsYXRle1xyXG4gIGNvbnN0cnVjdG9yKCl7XHJcbiAgICBzdXBlcigpXHJcbiAgICB0aGlzLnJlbmRlcih0aGlzLmhlYWRlcignam9pbicpKVxyXG4gIH1cclxufVxyXG5uZXcgSm9pbigpIl0sIm1hcHBpbmdzIjoiOztBQUFBO0FBQ0E7OztBQUFBO0FBQ0E7Ozs7Ozs7OztBQUNBO0FBQ0E7OztBQUNBO0FBQUE7QUFDQTtBQURBO0FBQ0E7QUFDQTtBQUZBO0FBR0E7QUFDQTs7QUFMQTtBQUNBO0FBS0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/js/join.js\n");
+eval("\n\n__webpack_require__(/*! ../scss/courseDetail.scss */ \"./src/scss/courseDetail.scss\");\n\nvar _template = __webpack_require__(/*! ./template */ \"./src/js/template.js\");\n\nvar _template2 = _interopRequireDefault(_template);\n\nvar _jquery = __webpack_require__(/*! jquery */ \"./node_modules/_jquery@3.3.1@jquery/dist/jquery.js\");\n\nvar _jquery2 = _interopRequireDefault(_jquery);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar poster = __webpack_require__(/*! ../../static/img/course-poster.png */ \"./static/img/course-poster.png\");\n\n(0, _jquery2.default)('#video')[0].poster = poster;\n\nvar courseDetail = function (_Template) {\n  _inherits(courseDetail, _Template);\n\n  function courseDetail() {\n    _classCallCheck(this, courseDetail);\n\n    var _this = _possibleConstructorReturn(this, (courseDetail.__proto__ || Object.getPrototypeOf(courseDetail)).call(this));\n\n    _this.render(null, _this.footer());\n    return _this;\n  }\n\n  return courseDetail;\n}(_template2.default);\n\nnew courseDetail();//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvanMvY291cnNlRGV0YWlsLmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vL3NyYy9qcy9jb3Vyc2VEZXRhaWwuanM/ODIzNyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgJy4uL3Njc3MvY291cnNlRGV0YWlsLnNjc3MnXHJcbmltcG9ydCBUZW1wbGF0ZSBmcm9tICcuL3RlbXBsYXRlJ1xyXG5pbXBvcnQgJCBmcm9tICdqcXVlcnknXHJcbmNvbnN0IHBvc3RlciA9IHJlcXVpcmUoJy4uLy4uL3N0YXRpYy9pbWcvY291cnNlLXBvc3Rlci5wbmcnKVxyXG5cclxuJCgnI3ZpZGVvJylbMF0ucG9zdGVyPXBvc3RlclxyXG5jbGFzcyBjb3Vyc2VEZXRhaWwgZXh0ZW5kcyBUZW1wbGF0ZSB7XHJcbiAgY29uc3RydWN0b3IoKSB7XHJcbiAgICBzdXBlcigpXHJcbiAgICB0aGlzLnJlbmRlcihudWxsLCB0aGlzLmZvb3RlcigpKVxyXG4gIH1cclxufVxyXG5uZXcgY291cnNlRGV0YWlsKClcclxuIl0sIm1hcHBpbmdzIjoiOztBQUFBO0FBQ0E7QUFBQTtBQUNBOzs7QUFBQTtBQUNBOzs7Ozs7Ozs7OztBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7OztBQUNBO0FBQUE7QUFDQTtBQURBO0FBQ0E7QUFDQTtBQUZBO0FBR0E7QUFDQTs7QUFMQTtBQUNBO0FBS0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/js/courseDetail.js\n");
 
 /***/ }),
 
-/***/ "./src/scss/join.scss":
-/*!****************************!*\
-  !*** ./src/scss/join.scss ***!
-  \****************************/
+/***/ "./src/scss/courseDetail.scss":
+/*!************************************!*\
+  !*** ./src/scss/courseDetail.scss ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvc2Nzcy9qb2luLnNjc3MuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvc2Nzcy9qb2luLnNjc3M/YmQyNyJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBleHRyYWN0ZWQgYnkgbWluaS1jc3MtZXh0cmFjdC1wbHVnaW4iXSwibWFwcGluZ3MiOiJBQUFBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/scss/join.scss\n");
+eval("// extracted by mini-css-extract-plugin//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvc2Nzcy9jb3Vyc2VEZXRhaWwuc2Nzcy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3NyYy9zY3NzL2NvdXJzZURldGFpbC5zY3NzPzQyZWYiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luIl0sIm1hcHBpbmdzIjoiQUFBQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/scss/courseDetail.scss\n");
+
+/***/ }),
+
+/***/ "./static/img/course-poster.png":
+/*!**************************************!*\
+  !*** ./static/img/course-poster.png ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"assets/course-poster.png\";//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zdGF0aWMvaW1nL2NvdXJzZS1wb3N0ZXIucG5nLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3RhdGljL2ltZy9jb3Vyc2UtcG9zdGVyLnBuZz82NzllIl0sInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gX193ZWJwYWNrX3B1YmxpY19wYXRoX18gKyBcImFzc2V0cy9jb3Vyc2UtcG9zdGVyLnBuZ1wiOyJdLCJtYXBwaW5ncyI6IkFBQUEiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./static/img/course-poster.png\n");
 
 /***/ })
 
