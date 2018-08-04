@@ -30,10 +30,9 @@ new Index()
       })
     }
   }
-  $('.backtop').click(()=>{
-    $('body,html').animate({scrollTop:0},500)
+  $('.backtop').click(() => {
+    $('body,html').animate({ scrollTop: 0 }, 500)
   })
-
 })()
 // nav toggleclass
 $(() => {
@@ -212,3 +211,29 @@ $('.project-title>div').click(function() {
     .siblings()
     .removeClass('active')
 })
+
+const axios = require('axios')
+const qs = require('qs')
+axios.defaults.headers.post['Content-Type'] =
+  'application/x-www-form-urlencoded'
+axios.interceptors.request.use(
+  config => {
+    if (config.method.toLowerCase() === 'post') {
+      console.log(1)
+      config.data = qs.stringify(config.data)
+    }
+    console.log(config)    
+    return config
+  },
+  err => {
+    return Promise.reject(err)
+  }
+)
+
+axios.post('http://localhost:6767/post', {
+  name: 234,
+  age: 3242
+})
+  .then(res => {
+    console.log(res)
+  })
